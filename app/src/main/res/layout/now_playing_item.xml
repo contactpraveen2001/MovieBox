@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="moviePoster"
+            type="com.backbase.assignment.ui.data.MoviePoster" />
+    </data>
+    <ImageView
+        android:id="@+id/now_playing_poster"
+        android:layout_width="106dp"
+        android:layout_height="160dp"
+        android:contentDescription="@string/movie_poster"
+        app:loadMoviePoster="@{moviePoster}"
+        tools:srcCompat="@tools:sample/avatars"/>
+</layout>

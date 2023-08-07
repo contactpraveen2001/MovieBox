@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPage">#404040</item>
+        <item name="colorText">#CDCDCD</item>
+        <item name="colorBackgroundGenre">#FFFFFF</item>
+        <item name="fontFamily">@font/helvetica_neue</item>
+    </style>
+    <style name="section_text_style" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+    <style name="app_title_text_style" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="movie_title_text_style" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">?colorText</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="movie_title_text_large_style" parent="movie_title_text_style">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="movie_date_text_style" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?colorText</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="movie_genre_text_style" parent="movie_date_text_style">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+</resources>

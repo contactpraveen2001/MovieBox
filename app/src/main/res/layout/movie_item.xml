@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="movie"
+            type="com.backbase.assignment.ui.data.Movie" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="?colorPrimary"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/poster"
+            android:layout_width="49dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="1dp"
+            android:background="?colorPage"
+            android:transitionName="poster_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:loadMoviePoster="@{movie.poster}"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/movie_poster" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/movie_title_text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{movie.title}"
+            app:layout_constraintStart_toEndOf="@+id/poster"
+            app:layout_constraintTop_toTopOf="@+id/poster"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/rating_view"
+            tools:text="Title " />
+
+        <TextView
+            android:id="@+id/releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{movie.releaseDate}"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            style="@style/movie_date_text_style"
+            tools:text="April 12, 2019" />
+
+        <include
+            android:id="@+id/rating_view"
+            layout="@layout/rating_widget"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rating="@{movie.rating}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

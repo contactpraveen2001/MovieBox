@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MovieBox</string>
+    <string name="playing_now">Playing now</string>
+    <string name="most_popular">Most popular</string>
+    <string name="movie_poster">Movie poster</string>
+    <string name="overview">Overview</string>
+    <string name="back">Back</string>
+    <string name="connection_error">Something went wrong. Please try after some time.</string>
+</resources>
